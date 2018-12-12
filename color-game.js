@@ -5,9 +5,18 @@ var pickedColor = pickColor();
 var colorDisplay = document.getElementById("color-display");
 var messageDisplay = document.querySelector("#message");
 var h1 = document.querySelector("h1");
+var reset = document.querySelector("#reset");
 
 colorDisplay.textContent = pickedColor;
 
+reset.addEventListener("click", function(){
+	colors = generateRandomColors(6);
+	pickedColor = pickColor();
+	colorDisplay.textContent = pickedColor;
+	for (var i = 0; i < squares.length; i++) {
+		squares[i].style.backgroundColor = colors[i]
+	}
+})
 
 for (var i = 0; i < squares.length; i++) {
 	squares[i].style.backgroundColor = colors[i]
