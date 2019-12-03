@@ -51,7 +51,7 @@ function setupSquares() {
 				messageDisplay.textContent = "Correct!";
 				changeColors(clickedSquareColor);
 				h1.style.backgroundColor = pickedColor;
-				reset.textContent = "Play Again"
+				resetButton.textContent = "Play Again?"
 			} else {
 				this.style.backgroundColor = "#232323";
 				messageDisplay.textContent = "Try again";
